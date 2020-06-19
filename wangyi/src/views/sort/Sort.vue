@@ -47,14 +47,14 @@ export default {
   methods:{
     touchId(navId){
       this.navId = navId
-      console.log(navId)
+      // console.log(navId)
     },
     // 发送网络请求 数据
     async getcategoryData(){
       let result = await request('/categoryDatas')
       this.SortData = result.data
        this.navId = result.data[0].id
-      console.log(result)
+      // console.log(result)
     },
     Sousuo(){
       this.$router.push('/sousuo')
