@@ -1,6 +1,7 @@
 <template>
   <div id="wrap">
-    <!-- 搜索框 -->
+   <div class='dingwei'>
+      <!-- 搜索框 -->
     <div class="serch">
       <img class="logo" src="../../assets/img/images/logo.png" alt="">
      <div class="boxInput">
@@ -28,6 +29,7 @@
 
       </div>
     </div>
+   </div>
     <!-- 轮播 -->
    <div class="swiper-container">
     <div class="swiper-wrapper">
@@ -78,7 +80,7 @@
     <!-- 新人 -->
     <div class="newGif">
       <img class="gifImg" src="https://yanxuan.nosdn.127.net/e73d6d0b28648d1204623d28ea175447.gif" alt="">
-      <img class="gifme" src="../../assets/mmexport1509694093173_mix01.jpg" alt="">
+      <img class="gifme" src="" alt="">
     </div>
     <!-- 红包 -->
     <div class="redB">
@@ -91,6 +93,10 @@
       <div class="item"></div>
     </div>
     <NewPoser></NewPoser>
+    <Lou></Lou>
+    <!-- <Soltt></Soltt> -->
+    <SoltItem></SoltItem>
+    <Newp></Newp>
     <div>11</div>
     <div>11</div>
     <div>11</div>
@@ -109,10 +115,18 @@ import Swiper from 'swiper'
 import 'swiper/css/swiper.min.css'
 import {mapActions,mapState} from 'vuex'
 import NewPoser from './Newponser'
+import Lou from "./Lou";
+// import Soltt from './soltt'
+import SoltItem from './solttItem'
+import Newp from './NewP'
 export default {
   name: '',
   components:{
-    NewPoser
+    NewPoser,
+    Lou,
+    
+    SoltItem,
+    Newp
   },
   mounted(){
     var mySwiper = new Swiper ('.swiper-container', {
@@ -140,8 +154,13 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.wrap{width: 750px;}
-.serch{
+.dingwei{
+  // background: red;
+  background: #fff;
+  position: sticky;
+  z-index: 14;
+  top: 1px;
+  .serch{
   position: relative;
   display: flex;
   margin: 10px;
@@ -190,31 +209,32 @@ export default {
   }
   
 }
-.nav{
-  display: flex;
-  .navLeft{
-    width:650px;
-    height: 60px;
-    // background-color: red;
+  .nav{
     display: flex;
-    align-items: center;  
-    text-align: center;
-    overflow: hidden;
-    .navitem{
-    // flex: 1;
-    margin: 30px;
-    white-space: nowrap;
-    line-height: 60px;
-    box-sizing: border-box;
-    font-size: 29px;
+    .navLeft{
+      width:650px;
+      height: 60px;
+      // background-color: red;
+      display: flex;
+      align-items: center;  
+      text-align: center;
+      overflow: hidden;
+      .navitem{
+      // flex: 1;
+      margin: 30px;
+      white-space: nowrap;
+      line-height: 60px;
+      box-sizing: border-box;
+      font-size: 29px;
+    }
+    }
+    .navRight{
+      width: 100px;
+      height: 60px;
+      background-color: orange;
+    }
+    
   }
-  }
-  .navRight{
-    width: 100px;
-    height: 60px;
-    background-color: orange;
-  }
-  
 }
 .active{
   border-bottom:2px solid orange ;

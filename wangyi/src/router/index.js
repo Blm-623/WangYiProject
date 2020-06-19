@@ -6,13 +6,13 @@ const bought = () => import('../views/bought/Bought.vue')
 const cart = () => import('../views/cart/Cart.vue')
 const person = () => import('../views/person/Person.vue')
 const sort = () => import('../views/sort/Sort.vue')
-
+const sousuo = () => import('../components/Sousuo/Sousuo.vue')
 Vue.use(VueRouter)
 
   const routes = [
     {
       path:"/",
-      redirect:'/home'
+      redirect:'/sort'
     },
     {
       path:'/home',
@@ -33,6 +33,10 @@ Vue.use(VueRouter)
     {
       path:'/sort',
       component:sort
+    },
+    {
+      path:'/sousuo',
+      component:sousuo
     }
 ]
 

@@ -37,6 +37,8 @@ router.get('/getindexCateList', async (ctx, next) => {
 // 分类页数据
 const categoryDatas = require('./datas/categoryDatas.json')
 router.get('/categoryDatas', async (ctx,next)=>{
+	ctx.set('Access-Control-Allow-Origin', '*')
+	await new Promise(resolve => setTimeout(() => resolve(),2000))
 	ctx.body = categoryDatas
 })
 
