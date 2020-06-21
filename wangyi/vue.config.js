@@ -5,6 +5,18 @@ const postcss = px2rem({
 })
 
 module.exports = {
+  devServer: {
+    proxy: {
+      '/api': {
+        target:' https://m.you.163.com',
+        ws: true,
+        changeOrigin: true,
+				pathRewrite: {
+					'^/api': ''
+				}
+    }
+  }
+},
   css: {
     loaderOptions: {
       postcss: {
@@ -13,17 +25,6 @@ module.exports = {
         ]
       }
     }
-  },
-  devServer: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:3001',
-        ws: true,
-        changeOrigin: true,
-				Pathrewrite:{
-					'^/api' : ''
-      }
-    }
   }
-}
+  
 }

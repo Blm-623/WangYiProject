@@ -12,22 +12,8 @@
     </div>
     <!-- 导航 -->
     <div class="nav">
-      <div class="navLeft">
-        <div class="navitem active">推荐</div>
-        <div class="navitem">推2222荐</div>
-        <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div> <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div>
-        <div class="navitem">推荐</div>
-      </div>
-      <div class="navRight">
-
-      </div>
+      
+      <navT > </navT>
     </div>
    </div>
     <!-- 轮播 -->
@@ -116,15 +102,15 @@ import 'swiper/css/swiper.min.css'
 import {mapActions,mapState} from 'vuex'
 import NewPoser from './Newponser'
 import Lou from "./Lou";
-// import Soltt from './soltt'
 import SoltItem from './solttItem'
 import Newp from './NewP'
+import navT from './navTop'
 export default {
   name: '',
   components:{
     NewPoser,
     Lou,
-    
+    navT,
     SoltItem,
     Newp
   },

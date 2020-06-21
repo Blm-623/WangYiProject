@@ -11,19 +11,7 @@
       <div class="bom">
         <div class="hot">热门搜索</div>
         <div class="List">
-          <div class="Item"> 1111111</div>
-          <div class="Item"> 1111111</div>
-          <div class="Item"> 1111111</div>
-          <div class="Item"> 1111</div>
-          <div class="Item"> 1111</div>
-          <div class="Item"> 1111</div>
-          <div class="Item"> 1111</div>
-          <div class="Item"> 1111</div>
-          <div class="Item"> 1111</div>
-          <div class="Item"> 1111</div>
-          <div class="Item"> 11111111111111111111111</div>
-          <div class="Item"> 11111111111111111111111</div>
-          <div class="Item"> 11111111111111111111111</div>
+          <div class="Item" v-for="(item,index) in SouData.hotKeywordVOList" :key="index"> {{item.keyword}}</div>
         </div>
       </div>
    </div>
@@ -31,12 +19,28 @@
 </template>
 
 <script>
+
+import axios from 'axios'
+// axios.defaults.baseURL='/api'
 export default {
   name: '',
+  data(){
+    return {
+      SouData:[]
+    }
+  },
   methods:{
     goBack(){
       this.$router.push('/sort')
+    },
+    async sousuo(){
+        let   result = await axios.get('/api/xhr/search/init.json')
+        this.SouData = result.data.data
+      //  console.log(result.data.data)
     }
+  },
+  mounted(){
+    this.sousuo()
   }
 }
 </script>
