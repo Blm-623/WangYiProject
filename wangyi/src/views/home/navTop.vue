@@ -26,16 +26,16 @@ import Swiper from 'swiper'
 import 'swiper/css/swiper.min.css'
 export default {
   name: '',
-  mounted(){
-     var mySwiper = new Swiper ('.swiper-container', {
-       loop: true,
-      slidesPerView: 5,
-      // 如果需要分页器
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  }) 
-  }
+  // mounted(){
+  //    var mySwiper = new Swiper ('.swiper-container', {
+  //      loop: true,
+  //     slidesPerView: 5,
+  //     // 如果需要分页器
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //   },
+  // }) 
+  // }
 }
 </script>
 

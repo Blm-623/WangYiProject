@@ -1,11 +1,14 @@
 <template>
  <div  class="BougWrap">
-   <div class="header">
-     <img src="../../assets/icon-font/baise/home.svg" alt="">
-     <div>值得买</div>
-     <img src="../../assets/img/fangdajing.svg" alt="">
-     <img src="../../assets/icon-font/baise/icon-.svg" alt="">
-   </div>
+   
+   <MaiHeader>
+      <div class="header">
+        <img src="../../assets/icon-font/baise/home.svg" alt="">
+        <div>值得买</div>
+        <img src="../../assets/img/fangdajing.svg" alt="">
+        <img src="../../assets/icon-font/baise/icon-.svg" alt="">
+      </div>
+   </MaiHeader>
    <div class="plate">
      <div class="top">
        <img src="https://m.you.163.com/topic/index/img/topic_logo.c2284970.png" alt="">
@@ -20,9 +23,12 @@
 </template>
 
 <script>
-
+import MaiHeader from './MaiHeader'
 export default {
   name: '',
+  components:{
+    MaiHeader
+  }
 }
 </script>
 
@@ -30,7 +36,6 @@ export default {
   .BougWrap{
     .header{
       height:100px;
-      background: chocolate;
       display: flex;
       align-items: center;
       margin: 0 20px;
